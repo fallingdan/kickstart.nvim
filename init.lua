@@ -33,6 +33,9 @@ vim.o.showmode = false
 --  See `:help 'clipboard'`
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
+-- set color column for 80 and 120
+vim.opt.colorcolumn = {80, 120}
+
 -- Enable break indent
 vim.o.breakindent = true
 
