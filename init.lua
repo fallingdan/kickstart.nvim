@@ -34,7 +34,7 @@ vim.o.showmode = false
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
 -- set color column for 80 and 120
-vim.opt.colorcolumn = {80, 120}
+vim.opt.colorcolumn = { 80, 120 }
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -748,7 +748,7 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+      local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'javascript' }
       require('nvim-treesitter').setup {
         ensure_installed = filetypes,
       }
@@ -787,6 +787,10 @@ require('lazy').setup({
         },
       },
     },
+  },
+
+  {
+    'windwp/nvim-ts-autotag',
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
