@@ -36,6 +36,9 @@ vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 -- set color column for 80 and 120
 vim.opt.colorcolumn = { 80, 120 }
 
+-- set scrolloff
+vim.o.scrolloff = 8
+
 -- Enable break indent
 vim.o.breakindent = true
 
@@ -796,6 +799,12 @@ require('lazy').setup({
 
   {
     'windwp/nvim-ts-autotag',
+  },
+
+  {
+    'Aasim-A/scrollEOF.nvim',
+    event = { 'CursorMoved', 'WinScrolled' },
+    opts = {},
   },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
